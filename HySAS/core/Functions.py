@@ -76,7 +76,7 @@ def get_vendor(name, vendor_name=None, **kwargs):
         try:
             instance = getattr(
                 __import__(
-                    "src." + module_name,
+                    "HySAS." + module_name,
                     globals(),
                     locals(),
                     [class_name],

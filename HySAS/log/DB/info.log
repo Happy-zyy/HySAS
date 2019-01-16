@@ -44,3 +44,238 @@
 2019-01-15 15:36:17,237 - DB - 59 - INFO - Trying to connect to redis
 2019-01-15 15:36:17,704 - DB - 59 - INFO - Trying to connect to redis
 2019-01-15 15:36:17,717 - DB - 59 - INFO - Trying to connect to redis
+2019-01-16 11:23:18,509 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:18,517 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:18,668 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:19,312 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:19,318 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:19,326 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:44,698 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:44,706 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:44,735 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:45,256 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:45,263 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:45,270 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:23:45,272 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 11:25:34,629 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:40,779 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,228 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,235 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,271 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,794 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,801 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,808 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:25:59,809 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 11:26:41,487 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:41,494 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:41,548 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,183 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,190 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,197 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,199 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 11:26:42,256 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,263 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,292 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:26:42,294 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 11:59:43,416 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:43,423 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:43,453 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:44,014 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:44,022 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:44,030 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:44,030 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 11:59:44,032 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 11:59:44,032 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 11:59:44,035 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 12:00:42,046 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,053 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,082 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,633 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,637 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,640 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,644 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,648 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,650 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 12:00:42,651 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 12:00:42,652 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 12:00:42,653 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 12:00:42,655 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:05:27,277 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:05:40,119 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:07:35,467 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:08:00,707 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:08:57,073 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:09:44,100 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:12:09,237 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:14:16,598 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:16:39,681 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:17:03,198 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:19:56,705 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:20:22,377 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:21:44,117 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:22:49,185 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:24:28,167 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:37:33,920 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:53,691 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:53,701 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:53,748 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,371 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,378 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,385 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,386 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:39:54,392 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:39:54,409 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,417 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,426 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:39:54,428 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:39:54,431 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:44:17,721 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:17,729 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:17,765 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:18,319 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:18,319 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:18,326 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:18,333 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:18,334 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:44:18,335 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:44:18,338 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:44:18,338 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:45:06,377 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,384 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,419 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,964 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,965 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,973 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,973 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,980 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,981 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:45:06,982 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:45:06,983 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:45:06,984 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:45:06,986 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:53:47,231 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,239 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,271 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,836 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,843 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,843 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,850 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,850 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:53:47,852 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:53:47,854 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:54:42,455 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:54:56,807 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:20,724 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:20,731 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:20,770 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:21,360 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:21,367 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:21,368 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:21,374 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:21,375 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:56:21,376 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:56:21,379 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:56:21,402 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:47,471 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:47,478 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:47,507 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,083 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,090 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,097 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,099 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:58:48,101 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 14:58:48,104 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,109 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,112 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,120 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 14:58:48,122 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 14:58:48,124 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 15:14:27,070 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,077 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,112 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,672 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,679 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,687 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,687 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:14:27,689 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 15:14:27,689 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 15:14:27,691 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 15:14:27,698 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,140 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,148 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,187 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,771 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,778 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,778 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,786 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,786 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:22:55,788 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 15:22:55,790 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 15:22:55,790 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 15:22:55,798 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:52:49,239 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:53:33,871 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:53:48,123 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:53:55,740 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:54:53,430 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:55:31,092 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:58:03,617 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:58:33,713 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 15:58:50,782 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:01:24,014 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:01:43,708 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:01:56,358 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:02:52,853 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:03:15,355 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:41,913 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:41,920 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:41,950 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,580 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,587 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,590 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,594 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,596 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:06:42,597 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,602 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:06:42,605 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:06:42,607 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:06:42,609 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:06:42,618 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:09,805 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:09,811 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:09,841 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:10,401 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:10,401 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:10,408 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:10,408 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:10,416 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:07:10,418 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:07:10,418 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:07:10,420 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:07:10,420 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:07:10,426 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:58,732 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:58,739 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:58,768 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:59,340 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:59,347 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:59,355 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:59,355 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:15:59,357 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:15:59,357 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:15:59,359 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:15:59,379 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,013 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,020 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,051 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,610 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,617 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,618 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,624 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,624 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,626 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:30:05,629 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:30:05,632 - DB - 61 - INFO - Trying to connect to redis
+2019-01-16 16:30:05,635 - DB - 37 - INFO - 尝试连接到MySQL-db
+2019-01-16 16:30:05,637 - DB - 42 - INFO - 已经成功连接到MySQL
+2019-01-16 16:30:05,643 - DB - 61 - INFO - Trying to connect to redis

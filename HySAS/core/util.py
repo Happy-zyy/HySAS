@@ -4,6 +4,23 @@ import hashlib
 import time
 import json
 
+def get_worker_names(logger=None):
+    """
+    根据文件夹名字返回所有可能的worker_name
+    :return:
+    """
+    worker_names = []
+    # path = os.path.split(os.path.realpath(__file__))[0][:-6]+"/Worker"
+    # worker_names.extend(os.listdir(path))
+    try:
+        worker_names.extend(os.listdir(os.getcwd()+"/Worker"))
+    except FileNotFoundError as e:
+        if logger is None:
+            print("HySAS运行目录下没有Worker文件夹")
+        else:
+            logger.warning("HySAS运行目录下没有Worker文件夹")
+
+    return worker_names
 
 def get_logger(
     logger_name="main",

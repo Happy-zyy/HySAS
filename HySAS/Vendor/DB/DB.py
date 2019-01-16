@@ -20,7 +20,7 @@ class DB(Vendor):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def get_mongodb(self, config="mongodb.json", timeout=1500):
+    def get_MySQLdb(self, config="raw_mysql.json", timeout=1500):
         import os
         if "/" in config:
             cfg = util.read_config(config)
@@ -30,18 +30,20 @@ class DB(Vendor):
             )
         host = cfg["host"]
         port = cfg["port"]
+        user = cfg["user"]
+        password = cfg["password"]
+        db =  cfg["db"]
         try:
-            self.logger.info("尝试连接到Mongodb")
-            client = MongoClient(host=host, port=port,
-                                 serverSelectionTimeoutMS=timeout,
-                                 connect=False
-                                 )
-            client.server_info()
-            self.logger.info("已经成功连接到mongodb")
-            return client
+            self.logger.info("尝试连接到MySQL-db")
+            db = pymysql.connect(host, user, password, db)
+            cursor = db.cursor()
+            cursor.execute("SELECT VERSION()")
+            cursor.fetchone()
+            self.logger.info("已经成功连接到MySQL")
+            return db
         except:
             self.logger.warning(
-                ">>>>>>>>>>>>>>>>>>连接到mongodb失败<<<<<<<<<<<<<<<<<<<")
+                ">>>>>>>>>>>>>>>>>>连接到MySQL失败<<<<<<<<<<<<<<<<<<<")
             return False
 
     def get_redis(self, config="redis.json"):
@@ -58,7 +60,7 @@ class DB(Vendor):
         try:
             self.logger.info("Trying to connect to redis")
             self.redis = redis.StrictRedis(
-               # decode_responses=True,
+                decode_responses=True,
                 host=host,
                 port=port
             )

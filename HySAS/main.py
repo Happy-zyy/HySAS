@@ -115,9 +115,15 @@ def __command_handler__(msg_command):
                 logger.error(e)
 
     elif msg_command["type"] == "user":
+        """
+        用于接受前端用户数据
+        """
         pass
 
     elif msg_command["type"] == "data":
+        """
+        用于接受关联分析时可能向外传输的交互信号
+        """
         pass
 
 # @click.command()
@@ -130,10 +136,10 @@ def main(what=None):
                 exit(0)
             else:
                 print(
-                    "Welcome to HySAS! Following is the "
+                    "Welcome to HySAS! Following is the awesome!!!"
                 )
-                doc = "Let`s go"
-                print(doc)
+                logo = "Let`s go"
+                print(logo)
                 # open a thread for the Worker of Monitor
                 start_worker(worker_name="Monitor",nickname="Monitor")
                 logger.info("Monitor has started")
@@ -154,6 +160,9 @@ def main(what=None):
             channel_name = "HySAS.Command"
             command_listener.subscribe([channel_name])
 
+            # 数据关联 态势分析
+            start_worker(worker_name="Process",nickname="Process")
+            #print(worker_dict)
             for item in command_listener.listen():   #阻塞式
                 if item["type"] == "message":
                     __command_handler__(item["data"])

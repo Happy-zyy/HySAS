@@ -129,13 +129,7 @@ class Worker(multiprocessing.Process):
         if "token" in info:
             if info["token"] != self.__token__:
                 if "heart_beat" in info:
-                    if (
-                                datetime.now() -
-                                datetime.strptime(
-                                    info["heart_beat"],
-                                    '%Y-%m-%d %H:%M:%S.%f'
-                                )
-                    ) < timedelta(seconds=self.__heart_beat_interval__):
+                    if (time.time() - float(info["heart_beat"])) < self.__heart_beat_interval__:
                         return False
         return True
 
@@ -186,20 +180,20 @@ class Worker(multiprocessing.Process):
         pass
 
     def init_redis(self):
-        # 检测redis, mongodb连接
+        # 检测redis, Mysqldb连接
         try:
             self.__redis__ = get_vendor("DB").get_redis()
             self.__redis__.client_list()
             self.__listener__ = self.__redis__.pubsub()
-            self.__listener__.subscribe(["dHydra"])
+            self.__listener__.subscribe(["HySAS"])
         except redis.ConnectionError:
             self.logger.error("Cannot connect to redis")
             return False
 
-    def init_mongodb(self):
-        self.mongo = get_vendor("DB").get_mongodb()
-        if self.mongo is False:
-            self.logger.error("Cannot connect to mongodb")
+    def init_MySQLdb(self):
+        self.MySQL = get_vendor("DB").get_MySQLdb()
+        if self.MySQL is False:
+            self.logger.error("Cannot connect to MySQLdb")
             return False
 
     def check_prerequisites(self):
@@ -226,18 +220,25 @@ class Worker(multiprocessing.Process):
     def __heart_beat__(self):
         # flush status infomation to redis
         status = dict()
-        status["heart_beat"] = datetime.now()
+        status["heart_beat"] = time.time()
         status["nickname"] = self.__nickname__
-        status["error_msg"] = self.__error_msg__
-        status["stop_info"] = self.__stop_info__
-        status["stop_time"] = self.__stop_time__
-        status["status"] = self.__status__
-        status["threads"] = copy.deepcopy(self.__threads__)
-        status["data_feeder"] = self.__data_feeder__
         status["pid"] = self.pid
-        status["follower"] = self.__follower__
         status["token"] = self.__token__
         status["heart_beat_interval"] = self.__heart_beat_interval__
+        if self.__error_msg__:
+            status["error_msg"] = self.__error_msg__
+        if self.__stop_info__:
+            status["stop_info"] = self.__stop_info__
+        if self.__stop_info__:
+            status["stop_time"] = self.__stop_time__
+        if self.__status__:
+            status["status"] = self.__status__
+        if self.__threads__:
+            status["threads"] = copy.deepcopy(self.__threads__)
+        if self.__data_feeder__:
+            status["data_feeder"] = self.__data_feeder__
+        if self.__follower__:
+            status["follower"] = self.__follower__
         self.__redis__.hmset(self.redis_key + "Info", status)
 
     def __producer__(self):
@@ -256,6 +257,7 @@ class Worker(multiprocessing.Process):
             data = self.__listener__.get_message(timeout=10)
             if data is not None:
                 self.__data_handler__(data)
+            time.sleep(1)
 
     # 需要在子类中重写的数据处理方法
     def __data_handler__(self, msg):
@@ -298,7 +300,7 @@ class Worker(multiprocessing.Process):
             sys.exit(0)
 
         self.init_redis()
-        self.init_mongodb()
+        self.init_MySQLdb()
 
         # 实例化self.logger
         self.logger = util.get_logger(
@@ -320,7 +322,6 @@ class Worker(multiprocessing.Process):
         """
         初始化Worker
         """
-        print("****test process!!!****")
         self.__on_start__()
         self.logger.info("初始化Worker")
         # 用户自定义的on_start
@@ -388,17 +389,17 @@ class Worker(multiprocessing.Process):
         if (worker_name is not None) and (nickname is None):
             # 订阅所有此类Worker
             self.__listener__.psubscribe(
-                "dHydra.Worker." + worker_name + ".*.Pub"
+                "HySAS.Worker." + worker_name + ".*.Pub"
             )
             self.logger.info(
                 "About to subscribe the Worker of worker_name: {}, pattern:{}"
                     .format(
                     worker_name,
-                    "dHydra.Worker." + worker_name + ".*.Pub"
+                    "HySAS.Worker." + worker_name + ".*.Pub"
                 )
             )
         elif (worker_name is not None) and (nickname is not None):
-            channel_name = "dHydra.Worker." \
+            channel_name = "HySAS.Worker." \
                            + worker_name + "." + nickname + ".Pub"
             self.__listener__.subscribe(channel_name)
             self.logger.info(
@@ -407,14 +408,14 @@ class Worker(multiprocessing.Process):
         elif (nickname is not None):
             # 订阅nickname
             self.__listener__.psubscribe(
-                "dHydra.Worker.*." +
+                "HySAS.Worker.*." +
                 nickname + ".Pub"
             )
             self.logger.info(
                 "About to subscribe the Worker of nickname: {}, pattern:{}"
                     .format(
                     nickname,
-                    "dHydra.Worker.*." +
+                    "HySAS.Worker.*." +
                     nickname +
                     ".Pub"
                 )
@@ -429,26 +430,26 @@ class Worker(multiprocessing.Process):
         if (worker_name is not None) and (nickname is None):
             # 订阅所有此类Worker
             self.__listener__.punsubscribe(
-                "dHydra.Worker." + worker_name + ".*.Pub")
+                "HySAS.Worker." + worker_name + ".*.Pub")
             self.logger.info(
                 "About to unsubscribe the Worker of worker_name: {}, \
                 pattern:{}"
                     .format(
                     nickname,
-                    "dHydra.Worker.*." + worker_name + ".Pub"
+                    "HySAS.Worker.*." + worker_name + ".Pub"
                 )
             )
             pass
         elif (nickname is not None):
             # 订阅nickname
             self.__listener__.punsubscribe(
-                "dHydra.Worker.*." + nickname + ".Pub"
+                "HySAS.Worker.*." + nickname + ".Pub"
             )
             self.logger.info(
                 "About to subscribe the Worker of nickname: {}, pattern:{}"
                     .format(
                     nickname,
-                    "dHydra.Worker.*." + nickname + ".Pub"
+                    "HySAS.Worker.*." + nickname + ".Pub"
                 )
             )
         else:

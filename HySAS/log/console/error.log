@@ -1,0 +1,3 @@
+2019-01-16 11:23:18,674 - console - 168 - ERROR - 'NoneType' object has no attribute 'nickname'
+2019-01-16 11:23:44,737 - console - 168 - ERROR - 'NoneType' object has no attribute 'nickname'
+2019-01-16 11:25:59,273 - console - 168 - ERROR - 'NoneType' object has no attribute 'nickname'

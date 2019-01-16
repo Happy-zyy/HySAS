@@ -1,3 +1,24 @@
 2019-01-15 15:02:10,563 - console - 86 - INFO - Monitor has started
 2019-01-15 15:10:45,019 - console - 86 - INFO - Monitor has started
 2019-01-15 15:36:17,236 - console - 86 - INFO - Monitor has started
+2019-01-16 11:23:18,665 - console - 139 - INFO - Monitor has started
+2019-01-16 11:23:18,674 - console - 168 - ERROR - 'NoneType' object has no attribute 'nickname'
+2019-01-16 11:23:44,734 - console - 139 - INFO - Monitor has started
+2019-01-16 11:23:44,737 - console - 168 - ERROR - 'NoneType' object has no attribute 'nickname'
+2019-01-16 11:25:59,270 - console - 139 - INFO - Monitor has started
+2019-01-16 11:25:59,273 - console - 168 - ERROR - 'NoneType' object has no attribute 'nickname'
+2019-01-16 11:26:41,524 - console - 139 - INFO - Monitor has started
+2019-01-16 11:59:43,452 - console - 139 - INFO - Monitor has started
+2019-01-16 12:00:42,081 - console - 139 - INFO - Monitor has started
+2019-01-16 14:39:53,748 - console - 139 - INFO - Monitor has started
+2019-01-16 14:44:17,764 - console - 139 - INFO - Monitor has started
+2019-01-16 14:45:06,418 - console - 139 - INFO - Monitor has started
+2019-01-16 14:53:47,270 - console - 139 - INFO - Monitor has started
+2019-01-16 14:56:20,769 - console - 139 - INFO - Monitor has started
+2019-01-16 14:58:47,506 - console - 139 - INFO - Monitor has started
+2019-01-16 15:14:27,111 - console - 145 - INFO - Monitor has started
+2019-01-16 15:22:55,187 - console - 145 - INFO - Monitor has started
+2019-01-16 16:06:41,950 - console - 145 - INFO - Monitor has started
+2019-01-16 16:07:09,840 - console - 145 - INFO - Monitor has started
+2019-01-16 16:15:58,767 - console - 145 - INFO - Monitor has started
+2019-01-16 16:30:05,050 - console - 145 - INFO - Monitor has started
