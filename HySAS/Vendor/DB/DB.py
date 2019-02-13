@@ -32,18 +32,18 @@ class DB(Vendor):
         port = cfg["port"]
         user = cfg["user"]
         password = cfg["password"]
-        db =  cfg["db"]
+        db = cfg["db"]
         try:
-            self.logger.info("尝试连接到MySQL-db")
+            self.logger.info("Trying to connect to MySQL-db")
             db = pymysql.connect(host, user, password, db)
             cursor = db.cursor()
             cursor.execute("SELECT VERSION()")
             cursor.fetchone()
-            self.logger.info("已经成功连接到MySQL")
+            self.logger.info("Successfully connected to MySQL")
             return db
         except:
             self.logger.warning(
-                ">>>>>>>>>>>>>>>>>>连接到MySQL失败<<<<<<<<<<<<<<<<<<<")
+                ">>>>>>>>>>>>>>>>>>Failed to connect to MySQL<<<<<<<<<<<<<<<<<<<")
             return False
 
     def get_redis(self, config="redis.json"):
@@ -65,6 +65,7 @@ class DB(Vendor):
                 port=port
             )
             self.redis.client_list()
+            self.logger.info("Successfully connected to redis")
             return self.redis
         except:
             self.logger.warning("Failed to connect to redis")
