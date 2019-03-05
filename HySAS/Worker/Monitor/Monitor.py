@@ -1,5 +1,5 @@
-from HySAS.core.Worker import Worker
-from HySAS.core.Functions import get_vendor, get_worker_class
+from core.Worker import Worker
+from core.Functions import get_vendor, get_worker_class
 import os
 import signal
 

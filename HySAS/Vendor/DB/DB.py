@@ -6,8 +6,8 @@
 """
 # 以下是自动生成的 #
 # --- 导入系统配置
-import HySAS.core.util as util
-from HySAS.core.Vendor import Vendor
+import core.util as util
+from core.Vendor import Vendor
 # --- 导入自定义配置
 # 以上是自动生成的 #
 import pymysql
@@ -60,7 +60,6 @@ class DB(Vendor):
         try:
             self.logger.info("Trying to connect to redis")
             self.redis = redis.StrictRedis(
-                decode_responses=True,
                 host=host,
                 port=port
             )

@@ -1,7 +1,7 @@
 """
 数据处理函数
 """
-from HySAS.core.Worker import Worker
+from core.Worker import Worker
 
 class Process(Worker):
     def __init__(self, **kwargs):
@@ -17,4 +17,6 @@ class Process(Worker):
         pass
 
     def __data_handler__(self, msg):
+        print(msg)
+        print("======")
         pass

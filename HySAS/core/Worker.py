@@ -13,8 +13,8 @@ import traceback
 import redis
 import json
 import copy
-import HySAS.core.util as util
-from HySAS.console import *
+import core.util as util
+from console import *
 from datetime import datetime
 from datetime import timedelta
 from abc import ABCMeta
@@ -23,7 +23,6 @@ import sys
 import os
 import ast
 import pickle
-
 
 class Worker(multiprocessing.Process):
     __metaclass__ = ABCMeta
@@ -57,7 +56,7 @@ class Worker(multiprocessing.Process):
 
         self.logger = util.get_logger(
             logger_name=self.__class__.__name__,
-            log_path=self.__log_path__,  #
+            log_path=self.__log_path__,
             console_log=self.__console_log__,  # 屏幕打印日志开关，默认True
             console_log_level=self.__console_log_level__,  # 屏幕打印日志的级别，默认为INFO
             critical_log=self.__critical_log__,  # critica单独l写文件日志，默认关闭
@@ -180,10 +179,10 @@ class Worker(multiprocessing.Process):
         pass
 
     def init_redis(self):
-        # 检测redis, Mysqldb连接
+        # 检测redis, sqldb连接
         try:
             self.__redis__ = get_vendor("DB").get_redis()
-            self.__redis__.client_list()
+            #self.__redis__.client_list()
             self.__listener__ = self.__redis__.pubsub()
             self.__listener__.subscribe(["HySAS"])
         except redis.ConnectionError:
@@ -215,7 +214,7 @@ class Worker(multiprocessing.Process):
                         (msg_command["type"] == "pmessage"):
                     self.__command_handler__(msg_command["data"])
             else:
-                time.sleep(0.01)
+                time.sleep(0.5)
 
     def __heart_beat__(self):
         # flush status infomation to redis
@@ -253,11 +252,12 @@ class Worker(multiprocessing.Process):
         默认的消费者线程
         随着Worker进程的start而启动
         """
-        while True:
-            data = self.__listener__.get_message(timeout=10)
-            if data is not None:
-                self.__data_handler__(data)
-            time.sleep(1)
+        pass
+        # while True:
+        #     data = self.__listener__.get_message(timeout=10)
+        #     if data is not None:
+        #         self.__data_handler__(data)
+        #     time.sleep(1)
 
     # 需要在子类中重写的数据处理方法
     def __data_handler__(self, msg):
@@ -265,6 +265,7 @@ class Worker(multiprocessing.Process):
         需要在子类中被重写的用以处理数据的方法，
         接受到的msg数据是原始的从Redis中监听到的数据
         """
+        print("*****")
         pass
 
     def __before_termination__(self, sig):
@@ -454,3 +455,4 @@ class Worker(multiprocessing.Process):
             )
         else:
             self.logger.warning("nickname/worker_name的输入方式不合理")
+

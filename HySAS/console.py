@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
-from HySAS.core.Functions import *
-import HySAS.core.util as util
+from core.Functions import *
+import core.util as util
 import click
 import traceback
 import pickle
@@ -53,40 +53,22 @@ def start(worker_name=None, nickname=None):
     __redis__.publish("HySAS.Command", pickle.dumps(msg))
 
 
-@click.command()
-@click.argument('nickname', nargs=1)
-def terminate(nickname=None):
-    msg = {"type": "sys", "operation_name": "terminate_worker",
-           "kwargs": {"nickname": nickname}}
+# @click.command()
+# @click.argument('nickname', nargs=1)
+def stop(nickname=None):
+    msg = {"type": "sys",
+           "operation_name": "terminate_worker",
+           "kwargs": {"nickname": nickname}
+           }
     if nickname is not None:
         msg["kwargs"]["nickname"] = nickname
         __redis__.publish("HySAS.Command", pickle.dumps(msg))
 
 
-def start_worker(worker_name=None, nickname=None, **kwargs):
-    msg = {
-        "type": "sys",
-        "operation_name": "start_worker",
-        "kwargs": {
-            "worker_name": worker_name,
-            "nickname": nickname
-        },
-    }
-
-    for k in kwargs.keys():
-        msg["kwargs"][k] = kwargs[k]
-    __redis__.publish("HySAS.Command", pickle.dumps(msg))
-
-
-def stop_worker(nickname=None):
-    msg = {
-        "type": "sys",
-        "operation_name": "terminate_worker",
-        "kwargs": {
-            "nickname": nickname
-        }
-    }
-
+def shutdown(nickname=None):
+    msg = {"type": "sys",
+           "func": "shutdown"
+           }
     __redis__.publish("HySAS.Command", pickle.dumps(msg))
 
 
@@ -108,3 +90,4 @@ def send_command(
 
 logger = init_logger()
 __redis__ = get_vendor("DB").get_redis()
+

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
-import HySAS.core.util as util
+import core.util as util
 
 
 class Vendor:

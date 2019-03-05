@@ -6,12 +6,13 @@
 """
 # 以下是自动生成的 #
 # --- 导入系统配置
-import HySAS.core.util as util
-from HySAS.core.Vendor import Vendor
+import core.util as util
+from core.Vendor import Vendor
 # --- 导入自定义配置
 # 以上是自动生成的 #
 import time
-from HySAS.core.Functions import get_vendor
+import pickle
+from core.Functions import get_vendor
 import copy
 
 
@@ -36,7 +37,7 @@ class WorkerManager(Vendor):
         return worker_names
 
     def get_workers_from_redis(self):
-        keys = self.redis.keys("HySAS.Worker.*.*.Info")
+        keys = list(map(str,self.redis.keys("HySAS.Worker.*.*.Info")))
         workers = dict()
         for i in range(len(keys)):
             channel = keys[i]
@@ -68,12 +69,12 @@ class WorkerManager(Vendor):
                 self.worker_info[worker_name] = dict()
             for nickname, worker_info in workers.items():
                 heart_beat_interval = 1
+                difference = float("inf")
                 if "heart_beat_interval" in worker_info:
                     heart_beat_interval = int(worker_info["heart_beat_interval"])
                 try:
                     difference = time.time() - float(worker_info["heart_beat"])
                 except ValueError:
-                    difference = time.time() - float(worker_info["heart_beat"])
                     self.logger.error("时间错误")
 
                 if difference > heart_beat_interval+1:
@@ -86,7 +87,7 @@ class WorkerManager(Vendor):
                             "\tnickname: {}"
                             .format(worker_name, nickname)
                         )
-                        self.redis.hmset("HySAS.Worker."+worker_name+"."+nickname+".Info",worker_info)
+                        self.redis.hmset("HySAS.Worker."+worker_name+"."+nickname+".Info", worker_info)
                     self.worker_info[worker_name][nickname] = copy.deepcopy(worker_info)
                 if self.auto_remove_terminated > -1 and\
                         difference> self.auto_remove_terminated+1:

@@ -1,6 +1,7 @@
-from HySAS.console import logger
-from HySAS.core.Functions import *
+from console import logger
+from core.Functions import *
 import time
+import signal
 import click
 import pickle
 
@@ -69,6 +70,7 @@ def get_pid_by_nickname(redis_cli=None, nickname=None):
     if redis_cli is None:
         redis_cli = __redis__
     workers_info = get_workers_info(redis_cli=__redis__, nickname=nickname)
+    workers_info = list(map(convert, workers_info))
     if len(workers_info) == 1:
         return int(workers_info[0]["pid"])
     else:
@@ -99,7 +101,9 @@ def __command_handler__(msg_command):
         traceback.print_exc()
         print("msg_command is not dict \n",e)
     if msg_command["type"] == "sys":
-        if hasattr(
+        if "func" in msg_command and msg_command["func"] == "shutdown":
+            signal_handler()
+        elif hasattr(
                 sys.modules["HySAS.main"],
                 msg_command["operation_name"]
         ):
@@ -126,6 +130,15 @@ def __command_handler__(msg_command):
         """
         pass
 
+
+
+def signal_handler():
+    for work_name in list(worker_dict.keys()):
+        terminate_worker(work_name)
+    print('Shutdown HySAS!')
+    sys.exit(0)
+
+
 # @click.command()
 # @click.argument('what', nargs=-1)
 def main(what=None):
@@ -138,8 +151,21 @@ def main(what=None):
                 print(
                     "Welcome to HySAS! Following is the awesome!!!"
                 )
-                logo = "Let`s go"
+                logo = "◆　　　　◆　　　　　　　　　　　　　　　　　　　　　　   ◆\n"\
+"◆　　　　◆　　　　　　　　　　　　　◆◆◆◆◆　　　　　◆◆　　　　　　◆◆◆◆◆\n"\
+"◆　　　　◆　　　　　　　　　　　　◆◆◆◆◆  　　　　 ◆◆◆　　　　　◆◆◆\n"\
+"◆　　　　◆　　　◆◆　　◆◆　　　◆◆◆◆　　　　　　 ◆◆◆◆　　　　　　◆◆◆　　　　\n"\
+"◆◆◆◆◆◆　　　　◆◆　◆◆　　　　◆◆◆◆◆　　　　◆◆　◆◆　　　　　　◆◆◆◆◆　　\n"\
+"◆　　　　◆　　　　◆◆◆◆　　　　　　　　◆◆◆　　　◆◆◆◆◆◆　　　　　　　　◆◆◆　\n"\
+"◆　　　　◆　　　　　◆◆◆　　　◆◆◆　◆◆◆　　　 ◆◆　　◆◆◆　　　◆◆◆ ◆◆◆　　\n"\
+"◆　　　　◆　　　　　◆◆　　　　◆◆◆◆◆◆　　　　◆◆　　　◆◆◆　　　◆◆◆◆◆◆　　\n"\
+"　　　　　　　　　　　◆◆　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n"\
+"　　　　　　　　　　　◆◆　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n"
+
                 print(logo)
+
+
+
                 # open a thread for the Worker of Monitor
                 start_worker(worker_name="Monitor",nickname="Monitor")
                 logger.info("Monitor has started")
@@ -162,9 +188,9 @@ def main(what=None):
 
             # 数据关联 态势分析
             start_worker(worker_name="Process",nickname="Process")
-            #print(worker_dict)
-            for item in command_listener.listen():   #阻塞式
-                if item["type"] == "message":
+
+            for item in command_listener.listen():  # 阻塞式接收
+                if isinstance(item['data'], bytes):
                     __command_handler__(item["data"])
 
         else:
