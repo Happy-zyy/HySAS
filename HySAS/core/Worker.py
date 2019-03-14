@@ -148,7 +148,6 @@ class Worker(multiprocessing.Process):
                                     of the operation"
         }
         """
-        print(msg_command)
         try:
             msg_command = pickle.loads(msg_command)
             if not isinstance(msg_command, dict):
@@ -189,11 +188,6 @@ class Worker(multiprocessing.Process):
             self.logger.error("Cannot connect to redis")
             return False
 
-    def init_MySQLdb(self):
-        self.MySQL = get_vendor("DB").get_MySQLdb()
-        if self.MySQL is False:
-            self.logger.error("Cannot connect to MySQLdb")
-            return False
 
     def check_prerequisites(self):
         """
@@ -301,7 +295,6 @@ class Worker(multiprocessing.Process):
             sys.exit(0)
 
         self.init_redis()
-        self.init_MySQLdb()
 
         # 实例化self.logger
         self.logger = util.get_logger(
@@ -324,7 +317,7 @@ class Worker(multiprocessing.Process):
         初始化Worker
         """
         self.__on_start__()
-        self.logger.info("初始化Worker")
+        self.logger.info("初始化{}".format(self.__class__.__name__))
         # 用户自定义的on_start
         self.on_start()
 
